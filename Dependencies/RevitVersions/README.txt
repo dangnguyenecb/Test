@@ -1,0 +1,1 @@
+This folder holds the generated files needed for handling multiple revit versions.

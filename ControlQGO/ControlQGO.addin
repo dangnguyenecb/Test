@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>Control QGO</Name>
+		<Assembly>.\ControlQGO\ControlQGO.dll</Assembly>
+		<AddInId>B6251B62-98F4-4089-A474-F698854B7B9B</AddInId>
+		<FullClassName>ControlQGO.Main</FullClassName>
+		<VendorId>Eiffage Construction BIM</VendorId>
+		<VendorDescription>Eiffage Construction BIM</VendorDescription>
+	</AddIn>
+</RevitAddIns>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configurations>
+		Rvt2017Dbg;Rvt2017Rls;
+		Rvt2018Dbg;Rvt2018Rls;
+		Rvt2019Dbg;Rvt2019Rls;
+		Rvt2020Dbg;Rvt2020Rls;
+		Rvt2021Dbg;Rvt2021Rls;
+		Rvt2022Dbg;Rvt2022Rls;
+		Rvt2023Dbg;Rvt2023Rls
+	</Configurations>
+    <Platforms>x64</Platforms>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultItems>false</EnableDefaultItems>
+  </PropertyGroup>
+  
+    <PropertyGroup Condition=" '$(Configuration)' == 'Rvt2017Dbg' Or 
+	'$(Configuration)' == 'Rvt2018Dbg' Or 
+	'$(Configuration)' == 'Rvt2019Dbg' Or
+	'$(Configuration)' == 'Rvt2020Dbg' Or 
+	'$(Configuration)' == 'Rvt2021Dbg'Or 
+	'$(Configuration)' == 'Rvt2022Dbg'Or 
+	'$(Configuration)' == 'Rvt2023Dbg'">
+	<ConfigurationMode>Debug</ConfigurationMode>
+  </PropertyGroup>
+  
+   <PropertyGroup Condition=" '$(Configuration)' == 'Rvt2017Rls' Or 
+	'$(Configuration)' == 'Rvt2018Rls' Or 
+	'$(Configuration)' == 'Rvt2019Rls' Or
+	'$(Configuration)' == 'Rvt2020Rls' Or
+	'$(Configuration)' == 'Rvt2021Rls'Or
+	'$(Configuration)' == 'Rvt2022Rls'Or
+	'$(Configuration)' == 'Rvt2023Rls'">
+	<ConfigurationMode>Release</ConfigurationMode>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition=" '$(Configuration)' == 'Rvt2017Dbg' Or '$(Configuration)' == 'Rvt2017Rls'">
+      <RevitVersion>2017</RevitVersion>
+	  <TargetFramework>net452</TargetFramework>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition=" '$(Configuration)' == 'Rvt2018Dbg' Or '$(Configuration)' == 'Rvt2018Rls'">
+      <RevitVersion>2018</RevitVersion>
+	  <TargetFramework>net46</TargetFramework>
+  </PropertyGroup>
+  
+    <PropertyGroup Condition=" '$(Configuration)' == 'Rvt2019Dbg' Or '$(Configuration)' == 'Rvt2019Rls'">
+      <RevitVersion>2019</RevitVersion>
+	  <TargetFramework>net47</TargetFramework>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition=" '$(Configuration)' == 'Rvt2020Dbg' Or '$(Configuration)' == 'Rvt2020Rls'">
+      <RevitVersion>2020</RevitVersion>
+	  <TargetFramework>net471</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Rvt2021Dbg' Or '$(Configuration)' == 'Rvt2021Rls'">
+      <RevitVersion>2021</RevitVersion>
+	  <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+
+ <PropertyGroup Condition=" '$(Configuration)' == 'Rvt2022Dbg' Or '$(Configuration)' == 'Rvt2022Rls'">
+      <RevitVersion>2022</RevitVersion>
+	  <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+
+ <PropertyGroup Condition=" '$(Configuration)' == 'Rvt2023Dbg' Or '$(Configuration)' == 'Rvt2023Rls'">
+      <RevitVersion>2023</RevitVersion>
+	  <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);REVIT$(RevitVersion)</DefineConstants> <!-- defines conditional directive REVIT2016, REVIT2017 ... -->
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <Path_DLL_API>$(SolutionDir)\Dependencies\RevitVersions\</Path_DLL_API>
+  </PropertyGroup>
+  
+  <ItemGroup>
+  <Reference Include="AdWindows">
+    <HintPath>$(Path_DLL_API)\$(RevitVersion)\AdWindows.dll</HintPath>
+    <EmbedInteropTypes>false</EmbedInteropTypes>
+    <Private>false</Private>
+  </Reference>
+  <Reference Include="RevitAPI">
+    <HintPath>$(Path_DLL_API)\$(RevitVersion)\RevitAPI.dll</HintPath>
+    <EmbedInteropTypes>false</EmbedInteropTypes>
+    <Private>false</Private>
+  </Reference>
+  <Reference Include="RevitAPIUI">
+    <HintPath>$(Path_DLL_API)\$(RevitVersion)\RevitAPIUI.dll</HintPath>
+    <EmbedInteropTypes>false</EmbedInteropTypes>
+    <Private>false</Private>
+  </Reference>
+  </ItemGroup>
+</Project>

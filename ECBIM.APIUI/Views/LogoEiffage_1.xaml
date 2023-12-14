@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="ECBIM.API.Views.LogoEiffage_1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ECBIM.API.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="45" d:DesignWidth="15" Width="15">
+
+    <StackPanel x:Name="logoPanel">
+        <Rectangle x:Name="lg10" Width="{Binding ElementName=logoPanel, Path=Width}" Height="{Binding ActualWidth, RelativeSource={RelativeSource self}}" Fill="Black"/>
+        <Rectangle x:Name="lg11" Width="{Binding ElementName=logoPanel, Path=Width}" Height="{Binding ActualWidth, RelativeSource={RelativeSource self}}" Fill="White"/>
+        <Rectangle x:Name="lg20" Width="{Binding ElementName=logoPanel, Path=Width}" Height="{Binding ActualWidth, RelativeSource={RelativeSource self}}" Fill="Red"/>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ECBIM.API.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppInsightsLog" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AppInsightsKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">f12befa0-4c05-4124-a5a4-306d6abfc2ac</Value>
+    </Setting>
+    <Setting Name="EncryptionKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PluginRevit2022</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
